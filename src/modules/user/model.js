@@ -3,9 +3,13 @@
 const config = require('../../config');
 const HttpStatus = require('@tiendq/http-status');
 const { logger } = require('../../common');
-const { READ_WRITE } = require('../common/scope');
-const { generateAccessToken } = require('../common/utils');
+// const { READ_WRITE } = require('../common/scope');
+// const { generateAccessToken } = require('../common/utils');
 const repository = require('./repository');
+
+const READ_WRITE = 1;
+
+function generateAccessToken(userId, scope) {}
 
 async function findUserById(userId) {
   let result = await repository.findUserById(userId);

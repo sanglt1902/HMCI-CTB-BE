@@ -1,7 +1,9 @@
 const express = require('express');
 const { asyncMiddleware, accessPermissionMiddleware } = require('../../middlewares');
-const { READ_WRITE } = require('../common/scope');
+// const { READ_WRITE } = require('../common/scope');
 const { createUser, loadUser, loadAllUsers, updateUser } = require('./controller');
+
+const READ_WRITE = 1;
 
 let router = express.Router();
 
